@@ -1,0 +1,10 @@
+input[type="submit"]{
+    color: #fff;
+    background-color: #022739;
+    border-color: #022739;
+}
+.form-loign{
+    width: 60%;
+    margin: 50px;
+    padding: 10px;
+}
