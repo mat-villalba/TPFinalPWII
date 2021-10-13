@@ -2129,7 +2129,8 @@ label {
 }
 .footer {
      background-color: #022739;
-     margin-top: 90px;
+     /* margin-top: 90px; */
+     padding-bottom: 20px;
 }
 .footer .Follow {
      margin-bottom: 27px;
