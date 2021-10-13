@@ -16,6 +16,8 @@
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
       <link rel="stylesheet" href="css/style.css">
+      <!-- customstyle css -->
+      <link rel="stylesheet" href="css/customStyle.css">
       <!-- fevicon -->
       <link rel="icon" href="images/fevicon.png" type="image/gif" />
    </head>
@@ -25,123 +27,39 @@
       </div>
       <!-- end loader -->
       <!-- header -->
-      <header>
-         <!-- header inner -->
-         <div class="header">
-            <div class="header_white_section">
-               <div class="container-fluid">
-                  <div class="row">
-                     <div class="col-md-12">
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="container">
-               <div class="row">
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                     <div class="full">
-                        <div class="center-desk">
-                           <div class="logo"> <a href="index.html"><img src="images/plane-img.png" alt="#"></a> </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                     <div class="menu-area">
-                        <div class="limit-box">
-                           <nav class="main-menu">
-                              <ul class="menu-area-main">
-                              <li class="active"> <a href='index.php'>Home</a> </li>
-                                 <li><a href="#travel">Travel</a></li>
-                                 <li><a href='registro.php'>Iniciar sesión</a></li>
-                                 <li> <a href="#about">Sobre nosotros</a> </li>
-                              </ul>
-                           </nav>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- end header inner -->
-      </header>
+      <?php
+      include_once('header.php');
+      ?>
       <!-- end header -->
-    <?php if(!empty($message)): ?>
+      <?php if(!empty($message)): ?>
         <p><?= $message ?></p>
         <?php endif; ?>
 
- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
- <div class="Follow">
-    <h3>Registrarse</h3>
-    <form action="procesar.php" method="post" enctype="application/x-www-form-urlencoded">
-    <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre">
-        </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-            <label for="clave">Clave</label>
-            <input type="password" name="clave" id="clave">
-        </div>
-
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-        <input type="submit" name="Enviar"> 
-        </div>
-    </div>
-    </form>
-</div>    
-</div>
-
-    <footer>
-         <div id="contact" class="footer">
-            <div class="container">
-               <div class="row pdn-top-30">
-                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                     <ul class="location_icon">
-                        <li> <a href="#"><img src="icon/facebook.png"></a></li>
-                        <li> <a href="#"><img src="icon/Twitter.png"></a></li>
-                        <li> <a href="#"><img src="icon/linkedin.png"></a></li>
-                        <li> <a href="#"><img src="icon/instagram.png"></a></li>
-                     </ul>
+      <section class="container">
+        <div class="row justify-content-center">
+            <div class="form-loign">
+               <h3>Registrarse</h3>
+               <form action="procesar.php" method="post" enctype="application/x-www-form-urlencoded">
+                  <div>
+                     <label for="nombre">Nombre</label>
+                     <input class="form-control" type="text" name="nombre" id="nombre">
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                     <div class="Follow">
-                     <h3>Sede central</h3>
-                        <span>Florencio Varela 1903<br>San Justo<br>
-                        Buenos Aires, Argentina<br>
-                        4480-8900</span>
-                     </div>
+                  <div>
+                     <label for="clave">Clave</label>
+                     <input class="form-control" type="password" name="clave" id="clave">
                   </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                     <div class="Follow">
-                        <h3>Links adicionales</h3>
-                        <ul class="link">
-                           <li> <a href="#">Sobre nosotros</a></li>
-                           <li> <a href="#">Terminos y condiciones</a></li>
-                        </ul>
-                     </div>
+                  <div class="row justify-content-center">
+                     <input type="submit" class="btn" name="Enviar"> 
                   </div>
-                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                     <div class="Follow">
-                        <h3> Contacto</h3>
-                        <div class="row">
-                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                              <input class="Newsletter" placeholder="Name" type="text">
-                           </div>
-                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                              <input class="Newsletter" placeholder="Email" type="text">
-                           </div>
-                           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                              <textarea class="textarea" placeholder="comment" type="text">Comment</textarea>
-                           </div>
-                        </div>
-                        <button class="Subscribe">Submit</button>
-                     </div>
-                  </div>
-               </div>
+               </form>
             </div>
-         </div>
-      </footer>
-      <!-- end footer -->
+        </div> 
+    </section>
+    <!-- footer -->
+    <?php
+    include_once('footer.php');
+    ?>
+   <!-- end footer -->
 </body>
 
 </html>
